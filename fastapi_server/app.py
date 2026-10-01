@@ -1,19 +1,27 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-class Student(BaseModel):
-    name:str
-    email:str
-    age:int
-    mark:float
+from models import Student,staff
+from database import student_collection,staff_collection
 
 app=FastAPI()
+def student_details(Student):
+    return{
+        "id":str(Student["_id"]),
+        "name":Student["name"],
+        "email":Student["email"],
+        "age":Student["age"],
+        "mark":Student["mark"]
+    }
 @app.get("/getstudents")
 def getstudents():
-    return stu
+    Student=student_collection.find()
+    return [student_details(Student)for Student in Student]
 
 @app.post("/register")
 def register(stu:Student):
-    return "Register api called"
+    result=student_collection.insert_one(stu.model_dump())
+    return {"Message":"Inserted successfully"}
+ 
+
 @app.put("/updateprofile")
 def updateprofile():
     return "Update profile called"
