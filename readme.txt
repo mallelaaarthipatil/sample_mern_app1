@@ -1366,7 +1366,18 @@ M=> Model (database fields)
 V=> View  (UI)
 C=> Controller (Action)
 
+07-10-2026
 
+1.Introduction and setup react appcomponents
+2.Individaul pages
+3.routing
+4.bootstrap
+5.props and state
+6.forms
+7.lists+maps
+8.axios+rest API and calls 
+9.JWT athuentication
+10.CRUD opertaions 
 
 
 
