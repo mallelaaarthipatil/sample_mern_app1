@@ -1,10 +1,9 @@
-sample mern app
-
 
 MERN
 
 website => collection of webpages
 webpage => collection of html,css,js components
+
 
 
 Combinations of FSD (web development)
@@ -23,6 +22,13 @@ Types of CSS
   -inline (within the tag)
   -internal (within the webpage)
   -external (overall project)
+
+
+
+
+
+
+
 
 
 29/07/2026
@@ -67,11 +73,28 @@ Git commands (CI & CD)
           -standalone installer(download)
 
 
+
+
+
+
+
+
+
+
+
+
 for map integration
 
  -go to browser
 
    search for embed google map
+
+
+
+
+
+
+
 
 
 download git for windows
@@ -88,6 +111,10 @@ git config --gloabl user.email "surenc1690@gmail.com"
 git config --list
    
 
+
+
+
+
 03/08/2026
 
 Today's topic
@@ -96,6 +123,7 @@ Today's topic
 
 Instructions:
   -Create new folder jquery_exp=> create new file exp1.html
+
 
 
 jquery
@@ -112,11 +140,20 @@ jquery:
    $("#demo").html("hello")
 
 
+
+
+
+
+
+
 create new file todo.html
 
 create basic html structure
 
 copy paste bootstrap css, icons links and jquery link in the head
+
+
+
 
 
  <div class="container mt-5">
@@ -146,6 +183,12 @@ copy paste bootstrap css, icons links and jquery link in the head
      </div>
 
 
+
+
+
+
+
+
 05/08/2026
 
 Todo application
@@ -161,6 +204,21 @@ KNEE OSTEOARTHRITIS DETECTION AND SEVERITY PREDICTION-M
 MONITORING MARKETING EMPLOYEES WITH AUTOMATED PAYROLL WITH GPS TRACKING-M
 MULTI DOWNLOADER USING PEER TO PEER ARCHITECTURE-M
 NYMBLE BLOCKING MISBEHAVING USERS ON ANONAMIZING NETWORKS-M
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 12/08/2026
@@ -188,6 +246,11 @@ Git for Windows/x64 Setup.
 once downloaded install it
 
 
+
+
+
+
+
 #one time used for one system
 git config --global user.name "surendar77"
 git config --global user.email "surenc1690@gmail.com"
@@ -208,6 +271,7 @@ git commit -m "second version"
 #for every update change the label
 git push -u origin main
 
+
 Step 1:
 create two folders in local system
 1.Sample_mern_app
@@ -223,6 +287,8 @@ https://github.com/surendar77/todoapp(your project name)
 step 4:
  once completed fill the below google form
      https://tinyurl.com/vignan-cse-b
+
+
 
 
 13/08/2026
@@ -356,11 +422,14 @@ db["student_db"].find({"department":"CSE"})
 
 #same as lt=> less than lte=> less than or equal
 
+
    -insertMany()
 Read
   -find() => fetch all records
   -findone()=> fetch one record based on condition
   -find(condition) => fetch records based on condition
+
+
 
 
 
@@ -372,6 +441,10 @@ MongoDb part-II
 open mongodb compass
 
 https://tinyurl.com/vignan-cse-b-notes
+
+
+
+
 
 
 use table_name
@@ -388,6 +461,9 @@ db.student_db.find({"age":{$eq:21}})
 db.student_db.find({"age":{$ne:21}})
 
 
+
+
+
 $in
 
 db.student_db.find({"department":{$in:["CSE","IT"]}})
@@ -395,6 +471,8 @@ db.student_db.find({"department":{$in:["CSE","IT"]}})
 $nin
 
 db.student_db.find({"department":{$nin:["CSE","IT"]}})
+
+
 
 logical
    and   => $and
@@ -421,11 +499,13 @@ db.student_db.updateOne({"studentId":"STU002"},{$set:{"city":"hyd"}})
 db.student_db.updateMany({"department":"CSE"},
               {$set:{"year":2}})
 
+
 #Exercise:
 1.fetch records department:cse and age>=21 and marks>60
 2.fetch records department:IT  or marks>=65
 3.update all IT department feespaid:yes
 4.fetch all records inbetween age 22 to 24
+
 
 
 20/08/2026
@@ -460,6 +540,19 @@ $unset
 db.student_db.updateOne({"studentId":"STU009"},{$unset:{"email":""}})
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 3.delete operations
     -deleteOne
 
@@ -491,6 +584,10 @@ $min,$min
 
 
 
+
+
+
+
 limit
 
 db.student_db.find().limit(3)
@@ -519,6 +616,7 @@ $group and $sum
 
 db.student_db.aggregate([{$group:{_id:"$department",totalStu:{$sum:1}}}])
 
+
 Exercise:
 
 open instructions file in drive
@@ -530,6 +628,7 @@ queries:
 1.display all products and their count using $group and $sum
 2.count overall products and display
 3.sort any product by ascending order by price and display 5 records only 
+
 
 
 
@@ -545,6 +644,8 @@ direct aggregate & sub aggregate
 
 db.products.find().forEach(doc=>print(JSON.stringify(doc)))
    => display entire record in single row
+
+
 
 
 syntax for aggregate function:
@@ -588,6 +689,7 @@ db.products.aggregate([
 ]).forEach(doc=>print(JSON.stringify(doc)))
 
 
+
 $match,$sort,$limit,$project
 db.products.aggregate([
   {
@@ -603,6 +705,8 @@ db.products.aggregate([
     $project:{_id:0,name:1,brand:1,price:1}
   }
 ]).forEach(doc=>print(JSON.stringify(doc)))
+
+
 
 
 $group => used to group multiple documents
@@ -649,6 +753,13 @@ db.products.aggregate([
            products:{$push:{name:"$name",brand:"$brand",price:"$price"}}
           }}
 ]).forEach(doc=>print(JSON.stringify(doc)))
+
+
+
+
+
+
+
 
 
 $first => used to print the first record among all the records
@@ -699,6 +810,7 @@ Exercise:(in student_db table)
 6.group department and display first mark student in all departments
 
 
+
 31/08/2026
 
 Topic:
@@ -713,10 +825,14 @@ if not display version download nodejs and install it
 
 
 
+
+
 Day 01: Introduction to NodeJs,basics and functions
 Day 02: Callback functions and async function
 Day 03: creating a server using nodejs
 Day 04: connecting with mongodb with nodejs
+
+
 
 
 Introduction to nodejs
@@ -742,6 +858,7 @@ cls => used to clear previous output
 command for stop execution 
 ctrl+c 
 
+
 1.basics keywords in nodejs
 
  __dirname => it will print current directory path
@@ -749,6 +866,7 @@ ctrl+c
 
 console.log(__dirname);
 console.log(__filename);
+
 
 2.variable declaration in nodejs
 
@@ -761,6 +879,7 @@ let a=10
 let names=["surendar","arun","arul"]
 //object(dictionary)
 let stu_details={"name":"surendar","skills":["C","Python"]}
+
 
 //array methods and access
 console.log(names[2]);
@@ -786,6 +905,12 @@ console.log(stu_details.name)
 //it won;t through it will null value if key is not available
 console.log(stu_details.skills[1]) //python
 console.log(stu_details.address.state) //TN
+
+
+
+
+
+
 
 3.functions in nodejs
 -normal function
@@ -852,6 +977,9 @@ function second(){
     console.log("second function called");
 }
 first("surendar",second);
+
+
+
 
 function first(name,second,third){
     console.log("first function called");
@@ -1159,10 +1287,18 @@ Topics:
 
 apart GET method check the outcome in postman
 
+
+
   -Connecting nodejs with mongodb
+
+
+
+
+
 
 using post method insert data into mongodb database
 using get method fetching data from mondodb database
+
 
 steps:
 1.create a server
@@ -1178,8 +1314,16 @@ steps:
 9. fetch the data insert in mongo through get method
 
 
+
+
+
+
 create new folder node_db
      create new file app.js
+
+
+
+
 
 npm install -g nodemon
 
@@ -1187,9 +1331,17 @@ npm install -g nodemon
 //run the file 
 nodemon app.js
 
+
+
+
+
+
+
 go to browser
 
 search for postman for windows
+
+
 
 
 {
@@ -1366,18 +1518,7 @@ M=> Model (database fields)
 V=> View  (UI)
 C=> Controller (Action)
 
-07-10-2026
 
-1.Introduction and setup react appcomponents
-2.Individaul pages
-3.routing
-4.bootstrap
-5.props and state
-6.forms
-7.lists+maps
-8.axios+rest API and calls 
-9.JWT athuentication
-10.CRUD opertaions 
 
 
 
