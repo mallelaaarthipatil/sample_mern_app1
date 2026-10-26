@@ -1497,7 +1497,9 @@ hrmanagement
    -notifications
 
 
-
+method :
+POSTjson format
+datas:name,email,password,role
 
 
 
